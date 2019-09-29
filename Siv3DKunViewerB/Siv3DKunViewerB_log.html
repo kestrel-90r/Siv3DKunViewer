@@ -1,0 +1,1187 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>Siv3DKunViewerB Log</title>
+<style>
+body		{ background-color: #18202A; font-family: 'Segoe UI','メイリオ','Meiryo','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Osaka','ＭＳ Ｐゴシック','MS PGothic','Arial',sans-serif; }
+h2			{ color: #FFEEDD; text-align: center; }
+p			{ margin: 0px 12% 0px; padding: 5px 20px 5px; font-size: 14px; }
+p.error		{ background: #F03000; color: #000011; }
+p.fail		{ background: #E08000; color: #001122; }
+p.warning	{ background: #D0D020; color: #001133; }
+p.script	{ background: #106060; color: #FFEEFF; }
+p.app		{ background: #202A2A; color: #FFEEDD; }
+p.info		{ background: #000A0A; color: #FFEEDD; }
+p.debug		{ background: #001F2F; color: #FFEEDD; }
+p.c0	{ color: #FFEEDD; text-align: center; font-size: 20px; }
+p.c1	{ color: #FFEEDD; text-align: center; font-size: 12px; }
+p.c2	{ color: #AA9988; text-align: center; font-size: 9px; }
+</style>
+</head>
+<body>
+<h2>Siv3DKunViewerB Log</h2>
+<p class="info">アプリケーションを開始します。</p>
+<p class="info">2019/9/29 22:26:35</p>
+<p class="info">エンジンを初期化します。</p>
+<p class="info">Siv3D Engine (Debug build) version August 2016 v2 (x86)</p>
+<p class="debug">FileMonitor[0(null)] を作成しました。</p>
+<p class="debug">FileMonitor マネージャーを初期化しました。</p>
+<p class="debug">BinaryReader &quot;C:/Users/yuki90r/source/repos/Siv3DKunViewerB/Siv3DKunViewerB/Engine/config.ini&quot; をオープンしました。サイズ: 186B</p>
+<p class="debug">TextReader &quot;C:/Users/yuki90r/source/repos/Siv3DKunViewerB/Siv3DKunViewerB/Engine/config.ini&quot; をオープンしました。サイズ: 186B, エンコーディング: UTF-8, BOM: あり</p>
+<p class="debug">INIReader &quot;Engine/config.ini&quot; をロードしました。</p>
+<p class="debug">BinaryReader &quot;C:/Users/yuki90r/source/repos/Siv3DKunViewerB/Siv3DKunViewerB/Engine/config.ini&quot; をクローズしました。</p>
+<p class="debug">TextReader &quot;C:/Users/yuki90r/source/repos/Siv3DKunViewerB/Siv3DKunViewerB/Engine/config.ini&quot; をクローズしました。</p>
+<p class="info">SSE3/SSE4.1/SSE4.2 をサポート</p>
+<p class="debug">BinaryReader &quot;/101&quot; をロードしました。サイズ: 50.3KiB</p>
+<p class="info">AVX2 をサポート</p>
+<p class="debug">GDI+ を初期化しました。</p>
+<p class="debug">Media Foundation を初期化しました。</p>
+<p class="info">MP3 デコーダーは libmpg123 を使用します。</p>
+<p class="debug">MP3 デコーダーを初期化しました。</p>
+<p class="debug">BinaryReader &quot;/101&quot; をクローズしました。</p>
+<p class="info">ウィンドウクラスを登録しました。</p>
+<p class="info">Wintab32.dll をロードしました。ペンタブを利用できます。</p>
+<p class="info">ペンタブの筆圧分解能: 32768 レベル</p>
+<p class="info">ゲームパッドを使用できます。最大接続数: 16</p>
+<p class="debug">xinput1_4.dll をロードしました。</p>
+<p class="info">XInput コントローラーを使用できます。</p>
+<p class="info">マルチタッチには対応していません。</p>
+<p class="debug">入力デバイスを初期化しました。</p>
+<p class="info">Kinect v1 は使用できません。</p>
+<p class="info">Kinect v2 は使用できません。</p>
+<p class="info">xaudio2_8.dll をロードしました。</p>
+<p class="debug">スプラッシュウィンドウを作成しました。</p>
+<p class="debug">Sound[0(null)] を作成しました。</p>
+<p class="debug">XAudio2(2.8) を初期化しました。</p>
+<p class="info">d3d11.dll をロードしました。</p>
+<p class="info">グラフィックスアダプター:</p>
+<p class="info">[0] NVIDIA GeForce GTX 750 Ti (VRAM: 985MiB, System: 0B, Shared: 3.04GiB)</p>
+<p class="info">[1] Microsoft Basic Render Driver (VRAM: 0B, System: 0B, Shared: 3.98GiB)</p>
+<p class="info">デフォルトのグラフィックスアダプターのグラフィックスデバイスを作成します。</p>
+<p class="info">Direct3D 11 driver type: Hardware (feature level: 11_0)</p>
+<p class="debug">利用可能な マルチサンプリング AA タイプ</p>
+<p class="debug">MSAA x1 (quality: 0)</p>
+<p class="debug">MSAA x2 (quality: 0)</p>
+<p class="debug">MSAA x4 (quality: 0)</p>
+<p class="debug">MSAA x8 (quality: 0)</p>
+<p class="debug">--</p>
+<p class="debug">使用する マルチサンプリング AA タイプ</p>
+<p class="debug">MSAA x4 (quality: 0)</p>
+<p class="info">使用するグラフィックスアダプター: NVIDIA GeForce GTX 750 Ti</p>
+<p class="debug">640x480(56.25 Hz [56250/1000])</p>
+<p class="debug">640x480(56.25 Hz [56250/1000])Centered</p>
+<p class="debug">640x480(60.317 Hz [60317/1000])</p>
+<p class="debug">640x480(60.317 Hz [60317/1000])Centered</p>
+<p class="debug">640x480(72.188 Hz [72188/1000])</p>
+<p class="debug">640x480(72.188 Hz [72188/1000])Centered</p>
+<p class="debug">640x480(75 Hz [75000/1000])</p>
+<p class="debug">640x480(75 Hz [75000/1000])Centered</p>
+<p class="debug">720x480(59.94 Hz [59940/1000])</p>
+<p class="debug">720x480(60 Hz [60000/1000])</p>
+<p class="debug">720x576(56.25 Hz [56250/1000])</p>
+<p class="debug">720x576(56.25 Hz [56250/1000])Centered</p>
+<p class="debug">720x576(60.317 Hz [60317/1000])</p>
+<p class="debug">720x576(60.317 Hz [60317/1000])Centered</p>
+<p class="debug">720x576(72.188 Hz [72188/1000])</p>
+<p class="debug">720x576(72.188 Hz [72188/1000])Centered</p>
+<p class="debug">720x576(75 Hz [75000/1000])</p>
+<p class="debug">720x576(75 Hz [75000/1000])Centered</p>
+<p class="debug">800x600(56.25 Hz [56250/1000])</p>
+<p class="debug">800x600(60.317 Hz [60317/1000])</p>
+<p class="debug">800x600(72.188 Hz [72188/1000])</p>
+<p class="debug">800x600(75 Hz [75000/1000])</p>
+<p class="debug">1024x768(60.004 Hz [60004/1000])</p>
+<p class="debug">1024x768(70.069 Hz [70069/1000])</p>
+<p class="debug">1024x768(75.029 Hz [75029/1000])</p>
+<p class="debug">1152x864(75 Hz [75000/1000])</p>
+<p class="debug">1176x664(59.94 Hz [59940/1000])</p>
+<p class="debug">1176x664(59.94 Hz [59940/1000])Centered</p>
+<p class="debug">1176x664(60 Hz [60000/1000])</p>
+<p class="debug">1176x664(60 Hz [60000/1000])Centered</p>
+<p class="debug">1280x720(59.94 Hz [59940/1000])</p>
+<p class="debug">1280x720(60 Hz [60000/1000])</p>
+<p class="debug">1280x768(75 Hz [75000/1000])</p>
+<p class="debug">1280x768(75 Hz [75000/1000])Centered</p>
+<p class="debug">1280x800(75 Hz [75000/1000])</p>
+<p class="debug">1280x800(75 Hz [75000/1000])Centered</p>
+<p class="debug">1280x960(75 Hz [75000/1000])</p>
+<p class="debug">1280x1024(60.02 Hz [60020/1000])</p>
+<p class="debug">1280x1024(75.025 Hz [75025/1000])</p>
+<p class="debug">1360x765(60.003 Hz [60003/1000])</p>
+<p class="debug">1360x768(60 Hz [60000/1000])</p>
+<p class="debug">1360x768(60 Hz [60000/1000])Centered</p>
+<p class="debug">1366x768(60 Hz [60000/1000])</p>
+<p class="debug">1366x768(60 Hz [60000/1000])Centered</p>
+<p class="debug">1600x900(60 Hz [60000/1000])</p>
+<p class="debug">1600x1024(59.954 Hz [59954/1000])</p>
+<p class="debug">1600x1024(59.954 Hz [59954/1000])Centered</p>
+<p class="debug">1680x1050(59.954 Hz [59954/1000])</p>
+<p class="debug">1920x1080(60 Hz [60000/1000])</p>
+<p class="debug">1920x1080(59.94006 Hz [60000/1001])</p>
+<p class="debug">Texture[0(null)] を作成しました。</p>
+<p class="debug">Texture マネージャーを初期化しました。</p>
+<p class="debug">Texture[1] を作成しました。</p>
+<p class="debug">Texture[2] を作成しました。</p>
+<p class="debug">Texture[3] を作成しました。</p>
+<p class="debug">Texture[4] を作成しました。</p>
+<p class="debug">Texture[5] を作成しました。</p>
+<p class="debug">Texture[6] を作成しました。</p>
+<p class="debug">Texture[7] を作成しました。</p>
+<p class="debug">Texture[8] を作成しました。</p>
+<p class="debug">Texture[9] を作成しました。</p>
+<p class="debug">Texture[10] を作成しました。</p>
+<p class="info">d3dcompiler_47.dll をロードしました。</p>
+<p class="debug">BinaryReader &quot;/64700&quot; をロードしました。サイズ: 880B</p>
+<p class="debug">VertexShader[1] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64700&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64701&quot; をロードしました。サイズ: 816B</p>
+<p class="debug">VertexShader[2] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64701&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64702&quot; をロードしました。サイズ: 1.42KiB</p>
+<p class="debug">VertexShader[3] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64702&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64703&quot; をロードしました。サイズ: 1.16KiB</p>
+<p class="debug">VertexShader[4] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64703&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64704&quot; をロードしました。サイズ: 1.21KiB</p>
+<p class="debug">VertexShader[5] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64704&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64705&quot; をロードしました。サイズ: 3.4KiB</p>
+<p class="debug">VertexShader[6] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64705&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64706&quot; をロードしました。サイズ: 1.6KiB</p>
+<p class="debug">VertexShader[7] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64706&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64707&quot; をロードしました。サイズ: 1.14KiB</p>
+<p class="debug">VertexShader[8] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64707&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64800&quot; をロードしました。サイズ: 496B</p>
+<p class="debug">PixelShader[1] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64800&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64801&quot; をロードしました。サイズ: 316B</p>
+<p class="debug">PixelShader[2] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64801&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64802&quot; をロードしました。サイズ: 808B</p>
+<p class="debug">PixelShader[3] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64802&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64803&quot; をロードしました。サイズ: 760B</p>
+<p class="debug">PixelShader[4] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64803&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64804&quot; をロードしました。サイズ: 828B</p>
+<p class="debug">PixelShader[5] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64804&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64805&quot; をロードしました。サイズ: 668B</p>
+<p class="debug">PixelShader[6] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64805&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64806&quot; をロードしました。サイズ: 756B</p>
+<p class="debug">PixelShader[7] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64806&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64807&quot; をロードしました。サイズ: 884B</p>
+<p class="debug">PixelShader[8] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64807&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64808&quot; をロードしました。サイズ: 732B</p>
+<p class="debug">PixelShader[9] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64808&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64809&quot; をロードしました。サイズ: 840B</p>
+<p class="debug">PixelShader[10] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64809&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64810&quot; をロードしました。サイズ: 968B</p>
+<p class="debug">PixelShader[11] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64810&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64811&quot; をロードしました。サイズ: 964B</p>
+<p class="debug">PixelShader[12] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64811&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64812&quot; をロードしました。サイズ: 1.14KiB</p>
+<p class="debug">PixelShader[13] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64812&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64813&quot; をロードしました。サイズ: 388B</p>
+<p class="debug">PixelShader[14] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64813&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64814&quot; をロードしました。サイズ: 3.56KiB</p>
+<p class="debug">PixelShader[15] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64814&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64815&quot; をロードしました。サイズ: 3.54KiB</p>
+<p class="debug">PixelShader[16] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64815&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64816&quot; をロードしました。サイズ: 3.57KiB</p>
+<p class="debug">PixelShader[17] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64816&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64817&quot; をロードしました。サイズ: 3.6KiB</p>
+<p class="debug">PixelShader[18] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64817&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64818&quot; をロードしました。サイズ: 3.82KiB</p>
+<p class="debug">PixelShader[19] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64818&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64819&quot; をロードしました。サイズ: 1.12KiB</p>
+<p class="debug">PixelShader[20] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64819&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64820&quot; をロードしました。サイズ: 2.18KiB</p>
+<p class="debug">PixelShader[21] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64820&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64821&quot; をロードしました。サイズ: 2.62KiB</p>
+<p class="debug">PixelShader[22] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64821&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64822&quot; をロードしました。サイズ: 468B</p>
+<p class="debug">PixelShader[23] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64822&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64823&quot; をロードしました。サイズ: 712B</p>
+<p class="debug">PixelShader[24] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64823&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64824&quot; をロードしました。サイズ: 5.08KiB</p>
+<p class="debug">PixelShader[25] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64824&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64825&quot; をロードしました。サイズ: 8.41KiB</p>
+<p class="debug">PixelShader[26] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64825&quot; をクローズしました。</p>
+<p class="debug">BinaryReader &quot;/64826&quot; をロードしました。サイズ: 11KiB</p>
+<p class="debug">PixelShader[27] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64826&quot; をクローズしました。</p>
+<p class="debug">VertexShader[0(null)] を作成しました。</p>
+<p class="debug">PixelShader[0(null)] を作成しました。</p>
+<p class="debug">Shader マネージャーを初期化しました。</p>
+<p class="debug">InputLayout[0(null)] を作成しました。</p>
+<p class="debug">InputLayout マネージャーを初期化しました。</p>
+<p class="debug">InputLayout[1] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64080&quot; をロードしました。サイズ: 13.2KiB</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/circle128.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/circle64.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/circle32.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/circle16.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/circle8.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/circle4.png&quot; をロードしました。</p>
+<p class="debug">Texture[11] を作成しました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/box-shadow256.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/box-shadow128.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/box-shadow64.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/box-shadow32.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/box-shadow16.png&quot; をロードしました。</p>
+<p class="debug">アーカイブされたファイル &quot;engine_textures/box-shadow8.png&quot; をロードしました。</p>
+<p class="debug">Texture[12] を作成しました。</p>
+<p class="debug">BinaryReader &quot;/64080&quot; をクローズしました。</p>
+<p class="debug">Mesh[0(null)] を作成しました。</p>
+<p class="debug">Mesh マネージャーを初期化しました。</p>
+<p class="debug">Mesh[1] を作成しました。</p>
+<p class="debug">Mesh[2] を作成しました。</p>
+<p class="debug">Mesh[3] を作成しました。</p>
+<p class="debug">Mesh[4] を作成しました。</p>
+<p class="debug">Mesh[5] を作成しました。</p>
+<p class="debug">Mesh[6] を作成しました。</p>
+<p class="debug">Mesh[7] を作成しました。</p>
+<p class="debug">InputLayout[2] を作成しました。</p>
+<p class="debug">InputLayout[3] を作成しました。</p>
+<p class="debug">InputLayout[4] を作成しました。</p>
+<p class="debug">InputLayout[5] を作成しました。</p>
+<p class="debug">Model[0(null)] を作成しました。</p>
+<p class="debug">モデルマネージャーを初期化しました。</p>
+<p class="debug">フォント &quot;C:\Users\yuki90r\AppData\LocalLow/Siv3D/20160812/x86/fonts/umeplus-p-gothic.ttf&quot; をシステムに登録しました。</p>
+<p class="debug">フォント umeplus-p-gothic: インストールされています</p>
+<p class="debug">フォント &quot;C:\Users\yuki90r\AppData\LocalLow/Siv3D/20160812/x86/fonts/mplus-1p-thin.ttf&quot; をシステムに登録しました。</p>
+<p class="debug">フォント mplus-1p-thin: インストールされています</p>
+<p class="debug">フォント &quot;C:\Users\yuki90r\AppData\LocalLow/Siv3D/20160812/x86/fonts/mplus-1p-light.ttf&quot; をシステムに登録しました。</p>
+<p class="debug">フォント mplus-1p-light: インストールされています</p>
+<p class="debug">フォント &quot;C:\Users\yuki90r\AppData\LocalLow/Siv3D/20160812/x86/fonts/mplus-1p-regular.ttf&quot; をシステムに登録しました。</p>
+<p class="debug">フォント mplus-1p-regular: インストールされています</p>
+<p class="debug">フォント &quot;C:\Users\yuki90r\AppData\LocalLow/Siv3D/20160812/x86/fonts/mplus-1p-medium.ttf&quot; をシステムに登録しました。</p>
+<p class="debug">フォント mplus-1p-medium: インストールされています</p>
+<p class="debug">フォント &quot;C:\Users\yuki90r\AppData\LocalLow/Siv3D/20160812/x86/fonts/mplus-1p-bold.ttf&quot; をシステムに登録しました。</p>
+<p class="debug">フォント mplus-1p-bold: インストールされています</p>
+<p class="debug">フォント &quot;C:\Users\yuki90r\AppData\LocalLow/Siv3D/20160812/x86/fonts/mplus-1p-heavy.ttf&quot; をシステムに登録しました。</p>
+<p class="debug">フォント mplus-1p-heavy: インストールされています</p>
+<p class="debug">フォント &quot;C:\Users\yuki90r\AppData\LocalLow/Siv3D/20160812/x86/fonts/mplus-1p-black.ttf&quot; をシステムに登録しました。</p>
+<p class="debug">フォント mplus-1p-black: インストールされています</p>
+<p class="debug">Font[0(null)] を作成しました。</p>
+<p class="debug">フォントマネージャーを初期化しました。</p>
+<p class="debug">Font[1] を作成しました。</p>
+<p class="debug">GUI[0(null)] を作成しました。</p>
+<p class="debug">GUI マネージャーを初期化しました。</p>
+<p class="debug">Effect[0(null)] を作成しました。</p>
+<p class="debug">エフェクトマネージャーを初期化しました。</p>
+<p class="info">エンジンの初期化が完了しました。</p>
+<p class="info">メインスレッドを開始しました。</p>
+<hr width="76%">
+<p class="debug">Font[2] を作成しました。</p>
+<p class="debug">スプラッシュウィンドウを終了しました。</p>
+<p class="debug">解像度を 800x450 に変更しました。</p>
+<p class="debug">(dynamic texture) (サイズ 1024x160 Format: 41)</p>
+<p class="debug">Texture[13] を作成しました。</p>
+<p class="debug">Mesh[8] を作成しました。</p>
+<p class="debug">Mesh[9] を作成しました。</p>
+<p class="debug">Mesh[10] を作成しました。</p>
+<p class="debug">Mesh[11] を作成しました。</p>
+<p class="debug">Mesh[12] を作成しました。</p>
+<p class="debug">Mesh[13] を作成しました。</p>
+<p class="debug">Mesh[14] を作成しました。</p>
+<p class="debug">Mesh[15] を作成しました。</p>
+<p class="debug">Mesh[16] を作成しました。</p>
+<p class="debug">Mesh[17] を作成しました。</p>
+<p class="debug">Mesh[18] を作成しました。</p>
+<p class="debug">Mesh[19] を作成しました。</p>
+<p class="debug">Mesh[20] を作成しました。</p>
+<p class="debug">Texture[14] を作成しました。</p>
+<p class="debug">Mesh[21] を作成しました。</p>
+<p class="debug">Texture[15] を作成しました。</p>
+<p class="debug">Mesh[22] を作成しました。</p>
+<p class="debug">Mesh[23] を作成しました。</p>
+<p class="debug">Mesh[24] を作成しました。</p>
+<p class="debug">Mesh[25] を作成しました。</p>
+<p class="debug">Mesh[26] を作成しました。</p>
+<p class="debug">Mesh[27] を作成しました。</p>
+<p class="debug">Mesh[28] を作成しました。</p>
+<p class="debug">Mesh[29] を作成しました。</p>
+<p class="debug">Mesh[30] を作成しました。</p>
+<p class="debug">Mesh[31] を作成しました。</p>
+<p class="debug">Mesh[32] を作成しました。</p>
+<p class="debug">Texture[14] を破棄しました。</p>
+<p class="debug">Texture[15] を破棄しました。</p>
+<p class="debug">Mesh[8] を破棄しました。</p>
+<p class="debug">Mesh[9] を破棄しました。</p>
+<p class="debug">Mesh[10] を破棄しました。</p>
+<p class="debug">Mesh[11] を破棄しました。</p>
+<p class="debug">Mesh[12] を破棄しました。</p>
+<p class="debug">Mesh[13] を破棄しました。</p>
+<p class="debug">Mesh[14] を破棄しました。</p>
+<p class="debug">Mesh[15] を破棄しました。</p>
+<p class="debug">Mesh[16] を破棄しました。</p>
+<p class="debug">Mesh[17] を破棄しました。</p>
+<p class="debug">Mesh[18] を破棄しました。</p>
+<p class="debug">Mesh[19] を破棄しました。</p>
+<p class="debug">Mesh[20] を破棄しました。</p>
+<p class="debug">Mesh[21] を破棄しました。</p>
+<p class="debug">Mesh[22] を破棄しました。</p>
+<p class="debug">Mesh[23] を破棄しました。</p>
+<p class="debug">Mesh[24] を破棄しました。</p>
+<p class="debug">Mesh[25] を破棄しました。</p>
+<p class="debug">Mesh[26] を破棄しました。</p>
+<p class="debug">Mesh[27] を破棄しました。</p>
+<p class="debug">Mesh[28] を破棄しました。</p>
+<p class="debug">Mesh[29] を破棄しました。</p>
+<p class="debug">Mesh[30] を破棄しました。</p>
+<p class="debug">Mesh[31] を破棄しました。</p>
+<p class="debug">Mesh[32] を破棄しました。</p>
+<p class="debug">Mesh[33] を作成しました。</p>
+<p class="debug">Mesh[34] を作成しました。</p>
+<p class="debug">Mesh[35] を作成しました。</p>
+<p class="debug">Mesh[36] を作成しました。</p>
+<p class="debug">Mesh[37] を作成しました。</p>
+<p class="debug">Mesh[38] を作成しました。</p>
+<p class="debug">Mesh[39] を作成しました。</p>
+<p class="debug">Mesh[40] を作成しました。</p>
+<p class="debug">Mesh[41] を作成しました。</p>
+<p class="debug">Mesh[42] を作成しました。</p>
+<p class="debug">Mesh[43] を作成しました。</p>
+<p class="debug">Mesh[44] を作成しました。</p>
+<p class="debug">Mesh[45] を作成しました。</p>
+<p class="debug">Texture[16] を作成しました。</p>
+<p class="debug">Mesh[46] を作成しました。</p>
+<p class="debug">Texture[17] を作成しました。</p>
+<p class="debug">Mesh[47] を作成しました。</p>
+<p class="debug">Mesh[48] を作成しました。</p>
+<p class="debug">Mesh[49] を作成しました。</p>
+<p class="debug">Mesh[50] を作成しました。</p>
+<p class="debug">Mesh[51] を作成しました。</p>
+<p class="debug">Mesh[52] を作成しました。</p>
+<p class="debug">Mesh[53] を作成しました。</p>
+<p class="debug">Mesh[54] を作成しました。</p>
+<p class="debug">Mesh[55] を作成しました。</p>
+<p class="debug">Mesh[56] を作成しました。</p>
+<p class="debug">Mesh[57] を作成しました。</p>
+<p class="debug">Texture[16] を破棄しました。</p>
+<p class="debug">Texture[17] を破棄しました。</p>
+<p class="debug">Mesh[33] を破棄しました。</p>
+<p class="debug">Mesh[34] を破棄しました。</p>
+<p class="debug">Mesh[35] を破棄しました。</p>
+<p class="debug">Mesh[36] を破棄しました。</p>
+<p class="debug">Mesh[37] を破棄しました。</p>
+<p class="debug">Mesh[38] を破棄しました。</p>
+<p class="debug">Mesh[39] を破棄しました。</p>
+<p class="debug">Mesh[40] を破棄しました。</p>
+<p class="debug">Mesh[41] を破棄しました。</p>
+<p class="debug">Mesh[42] を破棄しました。</p>
+<p class="debug">Mesh[43] を破棄しました。</p>
+<p class="debug">Mesh[44] を破棄しました。</p>
+<p class="debug">Mesh[45] を破棄しました。</p>
+<p class="debug">Mesh[46] を破棄しました。</p>
+<p class="debug">Mesh[47] を破棄しました。</p>
+<p class="debug">Mesh[48] を破棄しました。</p>
+<p class="debug">Mesh[49] を破棄しました。</p>
+<p class="debug">Mesh[50] を破棄しました。</p>
+<p class="debug">Mesh[51] を破棄しました。</p>
+<p class="debug">Mesh[52] を破棄しました。</p>
+<p class="debug">Mesh[53] を破棄しました。</p>
+<p class="debug">Mesh[54] を破棄しました。</p>
+<p class="debug">Mesh[55] を破棄しました。</p>
+<p class="debug">Mesh[56] を破棄しました。</p>
+<p class="debug">Mesh[57] を破棄しました。</p>
+<p class="debug">Mesh[58] を作成しました。</p>
+<p class="debug">Mesh[59] を作成しました。</p>
+<p class="debug">Mesh[60] を作成しました。</p>
+<p class="debug">Mesh[61] を作成しました。</p>
+<p class="debug">Mesh[62] を作成しました。</p>
+<p class="debug">Mesh[63] を作成しました。</p>
+<p class="debug">Mesh[64] を作成しました。</p>
+<p class="debug">Mesh[65] を作成しました。</p>
+<p class="debug">Mesh[66] を作成しました。</p>
+<p class="debug">Mesh[67] を作成しました。</p>
+<p class="debug">Mesh[68] を作成しました。</p>
+<p class="debug">Mesh[69] を作成しました。</p>
+<p class="debug">Mesh[70] を作成しました。</p>
+<p class="debug">Texture[18] を作成しました。</p>
+<p class="debug">Mesh[71] を作成しました。</p>
+<p class="debug">Texture[19] を作成しました。</p>
+<p class="debug">Mesh[72] を作成しました。</p>
+<p class="debug">Mesh[73] を作成しました。</p>
+<p class="debug">Mesh[74] を作成しました。</p>
+<p class="debug">Mesh[75] を作成しました。</p>
+<p class="debug">Mesh[76] を作成しました。</p>
+<p class="debug">Mesh[77] を作成しました。</p>
+<p class="debug">Mesh[78] を作成しました。</p>
+<p class="debug">Mesh[79] を作成しました。</p>
+<p class="debug">Mesh[80] を作成しました。</p>
+<p class="debug">Mesh[81] を作成しました。</p>
+<p class="debug">Mesh[82] を作成しました。</p>
+<p class="debug">Texture[18] を破棄しました。</p>
+<p class="debug">Texture[19] を破棄しました。</p>
+<p class="debug">Mesh[58] を破棄しました。</p>
+<p class="debug">Mesh[59] を破棄しました。</p>
+<p class="debug">Mesh[60] を破棄しました。</p>
+<p class="debug">Mesh[61] を破棄しました。</p>
+<p class="debug">Mesh[62] を破棄しました。</p>
+<p class="debug">Mesh[63] を破棄しました。</p>
+<p class="debug">Mesh[64] を破棄しました。</p>
+<p class="debug">Mesh[65] を破棄しました。</p>
+<p class="debug">Mesh[66] を破棄しました。</p>
+<p class="debug">Mesh[67] を破棄しました。</p>
+<p class="debug">Mesh[68] を破棄しました。</p>
+<p class="debug">Mesh[69] を破棄しました。</p>
+<p class="debug">Mesh[70] を破棄しました。</p>
+<p class="debug">Mesh[71] を破棄しました。</p>
+<p class="debug">Mesh[72] を破棄しました。</p>
+<p class="debug">Mesh[73] を破棄しました。</p>
+<p class="debug">Mesh[74] を破棄しました。</p>
+<p class="debug">Mesh[75] を破棄しました。</p>
+<p class="debug">Mesh[76] を破棄しました。</p>
+<p class="debug">Mesh[77] を破棄しました。</p>
+<p class="debug">Mesh[78] を破棄しました。</p>
+<p class="debug">Mesh[79] を破棄しました。</p>
+<p class="debug">Mesh[80] を破棄しました。</p>
+<p class="debug">Mesh[81] を破棄しました。</p>
+<p class="debug">Mesh[82] を破棄しました。</p>
+<p class="debug">Mesh[83] を作成しました。</p>
+<p class="debug">Mesh[84] を作成しました。</p>
+<p class="debug">Mesh[85] を作成しました。</p>
+<p class="debug">Mesh[86] を作成しました。</p>
+<p class="debug">Mesh[87] を作成しました。</p>
+<p class="debug">Mesh[88] を作成しました。</p>
+<p class="debug">Mesh[89] を作成しました。</p>
+<p class="debug">Mesh[90] を作成しました。</p>
+<p class="debug">Mesh[91] を作成しました。</p>
+<p class="debug">Mesh[92] を作成しました。</p>
+<p class="debug">Mesh[93] を作成しました。</p>
+<p class="debug">Mesh[94] を作成しました。</p>
+<p class="debug">Mesh[95] を作成しました。</p>
+<p class="debug">Texture[20] を作成しました。</p>
+<p class="debug">Mesh[96] を作成しました。</p>
+<p class="debug">Texture[21] を作成しました。</p>
+<p class="debug">Mesh[97] を作成しました。</p>
+<p class="debug">Mesh[98] を作成しました。</p>
+<p class="debug">Mesh[99] を作成しました。</p>
+<p class="debug">Mesh[100] を作成しました。</p>
+<p class="debug">Mesh[101] を作成しました。</p>
+<p class="debug">Mesh[102] を作成しました。</p>
+<p class="debug">Mesh[103] を作成しました。</p>
+<p class="debug">Mesh[104] を作成しました。</p>
+<p class="debug">Mesh[105] を作成しました。</p>
+<p class="debug">Mesh[106] を作成しました。</p>
+<p class="debug">Mesh[107] を作成しました。</p>
+<p class="debug">Texture[20] を破棄しました。</p>
+<p class="debug">Texture[21] を破棄しました。</p>
+<p class="debug">Mesh[83] を破棄しました。</p>
+<p class="debug">Mesh[84] を破棄しました。</p>
+<p class="debug">Mesh[85] を破棄しました。</p>
+<p class="debug">Mesh[86] を破棄しました。</p>
+<p class="debug">Mesh[87] を破棄しました。</p>
+<p class="debug">Mesh[88] を破棄しました。</p>
+<p class="debug">Mesh[89] を破棄しました。</p>
+<p class="debug">Mesh[90] を破棄しました。</p>
+<p class="debug">Mesh[91] を破棄しました。</p>
+<p class="debug">Mesh[92] を破棄しました。</p>
+<p class="debug">Mesh[93] を破棄しました。</p>
+<p class="debug">Mesh[94] を破棄しました。</p>
+<p class="debug">Mesh[95] を破棄しました。</p>
+<p class="debug">Mesh[96] を破棄しました。</p>
+<p class="debug">Mesh[97] を破棄しました。</p>
+<p class="debug">Mesh[98] を破棄しました。</p>
+<p class="debug">Mesh[99] を破棄しました。</p>
+<p class="debug">Mesh[100] を破棄しました。</p>
+<p class="debug">Mesh[101] を破棄しました。</p>
+<p class="debug">Mesh[102] を破棄しました。</p>
+<p class="debug">Mesh[103] を破棄しました。</p>
+<p class="debug">Mesh[104] を破棄しました。</p>
+<p class="debug">Mesh[105] を破棄しました。</p>
+<p class="debug">Mesh[106] を破棄しました。</p>
+<p class="debug">Mesh[107] を破棄しました。</p>
+<p class="info">System::Update() : ExitEvent CloseButton</p>
+<p class="debug">Texture[13] を破棄しました。</p>
+<p class="debug">Font[2] を破棄しました。</p>
+<hr width="76%">
+<p class="info">メインスレッドを終了しました。</p>
+<p class="info">ウィンドウメッセージの終了を待機中です。</p>
+<p class="info">ウィンドウ表示を終了しました。</p>
+<p class="debug">Effect[0(null)] を破棄しました。</p>
+<p class="debug">エフェクトマネージャーを終了しました。</p>
+<p class="debug">InputLayout[5] を破棄しました。</p>
+<p class="debug">InputLayout[4] を破棄しました。</p>
+<p class="debug">InputLayout[3] を破棄しました。</p>
+<p class="debug">InputLayout[2] を破棄しました。</p>
+<p class="debug">Model[0(null)] を破棄しました。</p>
+<p class="debug">モデルマネージャーを終了しました。</p>
+<p class="debug">Mesh[7] を破棄しました。</p>
+<p class="debug">Mesh[6] を破棄しました。</p>
+<p class="debug">Mesh[5] を破棄しました。</p>
+<p class="debug">Mesh[4] を破棄しました。</p>
+<p class="debug">Mesh[3] を破棄しました。</p>
+<p class="debug">Mesh[2] を破棄しました。</p>
+<p class="debug">Mesh[1] を破棄しました。</p>
+<p class="debug">Mesh[0(null)] を破棄しました。</p>
+<p class="debug">Mesh マネージャーを終了しました。</p>
+<p class="debug">GUI[0(null)] を破棄しました。</p>
+<p class="debug">GUI マネージャーを終了しました。</p>
+<p class="debug">Font[1] を破棄しました。</p>
+<p class="debug">Font[0(null)] を破棄しました。</p>
+<p class="debug">フォントマネージャーを終了しました。</p>
+<p class="debug">Texture[12] を破棄しました。</p>
+<p class="debug">Texture[11] を破棄しました。</p>
+<p class="debug">InputLayout[1] を破棄しました。</p>
+<p class="debug">InputLayout[0(null)] を破棄しました。</p>
+<p class="debug">InputLayout マネージャーを終了しました。</p>
+<p class="debug">PixelShader[1] を破棄しました。</p>
+<p class="debug">PixelShader[2] を破棄しました。</p>
+<p class="debug">PixelShader[3] を破棄しました。</p>
+<p class="debug">PixelShader[4] を破棄しました。</p>
+<p class="debug">PixelShader[5] を破棄しました。</p>
+<p class="debug">PixelShader[6] を破棄しました。</p>
+<p class="debug">PixelShader[7] を破棄しました。</p>
+<p class="debug">PixelShader[8] を破棄しました。</p>
+<p class="debug">PixelShader[9] を破棄しました。</p>
+<p class="debug">PixelShader[10] を破棄しました。</p>
+<p class="debug">PixelShader[11] を破棄しました。</p>
+<p class="debug">PixelShader[12] を破棄しました。</p>
+<p class="debug">PixelShader[13] を破棄しました。</p>
+<p class="debug">PixelShader[14] を破棄しました。</p>
+<p class="debug">PixelShader[15] を破棄しました。</p>
+<p class="debug">PixelShader[16] を破棄しました。</p>
+<p class="debug">PixelShader[17] を破棄しました。</p>
+<p class="debug">PixelShader[18] を破棄しました。</p>
+<p class="debug">PixelShader[19] を破棄しました。</p>
+<p class="debug">PixelShader[20] を破棄しました。</p>
+<p class="debug">PixelShader[21] を破棄しました。</p>
+<p class="debug">PixelShader[22] を破棄しました。</p>
+<p class="debug">PixelShader[23] を破棄しました。</p>
+<p class="debug">PixelShader[24] を破棄しました。</p>
+<p class="debug">PixelShader[25] を破棄しました。</p>
+<p class="debug">PixelShader[26] を破棄しました。</p>
+<p class="debug">PixelShader[27] を破棄しました。</p>
+<p class="debug">VertexShader[1] を破棄しました。</p>
+<p class="debug">VertexShader[2] を破棄しました。</p>
+<p class="debug">VertexShader[3] を破棄しました。</p>
+<p class="debug">VertexShader[4] を破棄しました。</p>
+<p class="debug">VertexShader[5] を破棄しました。</p>
+<p class="debug">VertexShader[6] を破棄しました。</p>
+<p class="debug">VertexShader[7] を破棄しました。</p>
+<p class="debug">VertexShader[8] を破棄しました。</p>
+<p class="debug">PixelShader[0(null)] を破棄しました。</p>
+<p class="debug">VertexShader[0(null)] を破棄しました。</p>
+<p class="debug">Shader マネージャーを終了しました。</p>
+<p class="debug">Texture[8] を破棄しました。</p>
+<p class="debug">Texture[0(null)] を破棄しました。</p>
+<p class="debug">Texture[1] を破棄しました。</p>
+<p class="debug">Texture[2] を破棄しました。</p>
+<p class="debug">Texture[3] を破棄しました。</p>
+<p class="debug">Texture[4] を破棄しました。</p>
+<p class="debug">Texture[5] を破棄しました。</p>
+<p class="debug">Texture[6] を破棄しました。</p>
+<p class="debug">Texture[7] を破棄しました。</p>
+<p class="debug">Texture[9] を破棄しました。</p>
+<p class="debug">Texture[10] を破棄しました。</p>
+<p class="debug">Texture マネージャーを終了しました。</p>
+<p class="debug">Sound[0(null)] を破棄しました。</p>
+<p class="debug">XAudio2 を終了しました。</p>
+<p class="debug">入力デバイスを終了しました。</p>
+<p class="info">ウィンドウクラスの登録を解除しました。</p>
+<p class="debug">MP3 デコーダーを終了しました。</p>
+<p class="debug">Media Foundation を終了しました。</p>
+<p class="debug">GDI+ を終了しました。</p>
+<p class="debug">FileMonitor[0(null)] を破棄しました。</p>
+<p class="debug">FileMonitor マネージャーを終了しました。</p>
+<p class="info">エンジンを終了しました。</p>
+<p class="info">2019/9/29 22:26:39</p>
+
+<br>
+<p class="c0">Siv3D Engine August 2016 v2 (x86)</p>
+<p class="c1">Copyright (c) 2008-2016 Ryo Suzuki</p>
+<p class="c1">Copyright (c) 2011-2013 Waseda Computer Entertainment</p>
+<br>
+<p class="c0">HamFramework</p>
+<p class="c1">Copyright (c) 2014-2016 Hamukun</p>
+<p class="c1">Copyright (c) 2014-2016 Ryo Suzuki</p>
+<br>
+<p class="c0">C++ Format</p>
+<p class="c1">Copyright (c) 2012-2015, Victor Zverovich</p>
+<p class="c2">
+ Redistribution and use in source and binary forms, with or without<br>
+ modification, are permitted provided that the following conditions are met:<br>
+<br>
+ 1. Redistributions of source code must retain the above copyright notice, this<br>
+    list of conditions and the following disclaimer.<br>
+ 2. Redistributions in binary form must reproduce the above copyright notice,<br>
+    this list of conditions and the following disclaimer in the documentation<br>
+    and/or other materials provided with the distribution.<br>
+<br>
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND<br>
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br>
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE<br>
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR<br>
+ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES<br>
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;<br>
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND<br>
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<p class="c0">libpng version 1.6.24 - August 4, 2016</p>
+<p class="c1">Copyright (c) 1998-2002,2004,2006-2016 Glenn Randers-Pehrson</p>
+<p class="c1">Copyright (c) 1996-1997 Andreas Dilger</p>
+<p class="c1">Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.</p>
+<br>
+<p class="c0">zlib version 1.2.8, April 28, 2013</p>
+<p class="c1">Copyright (c) 1995-2013 Jean-loup Gailly and Mark Adler</p>
+<br>
+<p class="c0">libjpeg</p>
+<p class="c1">Copyright (c) 1994-2011, Thomas G. Lane, Guido Vollbeding.</p>
+<p class="c2">
+this software is based in part on the work of the Independent JPEG Group
+</p>
+<br>
+<p class="c0">libjpeg-turbo version 1.4.2</p>
+<p class="c1">Copyright (c) 2009-2015 D. R. Commander. All Rights Reserved.</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are met:<br>
+<br>
+- Redistributions of source code must retain the above copyright notice,<br>
+  this list of conditions and the following disclaimer.<br>
+- Redistributions in binary form must reproduce the above copyright notice,<br>
+  this list of conditions and the following disclaimer in the documentation<br>
+  and/or other materials provided with the distribution.<br>
+- Neither the name of the libjpeg-turbo Project nor the names of its<br>
+  contributors may be used to endorse or promote products derived from this<br>
+  software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS",<br>
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE<br>
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br>
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF<br>
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS<br>
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN<br>
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)<br>
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE<br>
+POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">OpenJPEG version 1.5.2</p>
+<p class="c1">Copyright (c) 2002-2012, Communications and Remote Sensing Laboratory,<br>Universite catholique de Louvain (UCL), Belgium</p>
+<p class="c1">Copyright (c) 2002-2012, Professor Benoit Macq</p>
+<p class="c1">Copyright (c) 2003-2012, Antonin Descampe</p>
+<p class="c1">Copyright (c) 2003-2009, Francois-Olivier Devaux</p>
+<p class="c1">Copyright (c) 2005, Herve Drolon, FreeImage Team</p>
+<p class="c1">Copyright (c) 2002-2003, Yannick Verschueren</p>
+<p class="c1">Copyright (c) 2001-2003, David Janssens</p>
+<p class="c1">All rights reserved.</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+   notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+   notice, this list of conditions and the following disclaimer in the<br>
+   documentation and/or other materials provided with the distribution.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS `AS IS'<br>
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE<br>
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br>
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF<br>
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS<br>
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN<br>
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)<br>
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE<br>
+POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">libwebp version 0.5.0, December 23, 2015</p>
+<p class="c1">Copyright (c) 2010, Google Inc. All rights reserved.</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are met:<br>
+<br>
+  * Redistributions of source code must retain the above copyright<br>
+    notice, this list of conditions and the following disclaimer.<br>
+<br>
+  * Redistributions in binary form must reproduce the above copyright<br>
+    notice, this list of conditions and the following disclaimer in<br>
+    the documentation and/or other materials provided with the distribution.<br>
+<br>
+  * Neither the name of Google nor the names of its contributors may<br>
+    be used to endorse or promote products derived from this software<br>
+    without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT<br>
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<br>
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<br>
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">LibTIFF version 4.0.6</p>
+<p class="c1">Copyright (c) 1988-1997 Sam Leffler</p>
+<p class="c1">Copyright (c) 1991-1997 Silicon Graphics, Inc.</p>
+<p class="c2">
+Permission to use, copy, modify, distribute, and sell this software and<br>
+its documentation for any purpose is hereby granted without fee, provided<br>
+that (i) the above copyright notices and this permission notice appear in<br>
+all copies of the software and related documentation, and (ii) the names of<br>
+Sam Leffler and Silicon Graphics may not be used in any advertising or<br>
+publicity relating to the software without the specific, prior written<br>
+permission of Sam Leffler and Silicon Graphics.<br>
+<br>
+THE SOFTWARE IS PROVIDED "AS-IS" AND WITHOUT WARRANTY OF ANY KIND,<br>
+EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY<br>
+WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. <br>
+<br>
+IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR<br>
+ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND,<br>
+OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,<br>
+WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF <br>
+LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE <br>
+OF THIS SOFTWARE.<br>
+</p>
+<br>
+<p class="c0">libmpg123 version 1.22.0</p>
+<p class="c1">Copyright (c) 1995-2013 by Michael Hipp and others</p>
+<p class="c2">free software under the terms of the LGPL v2.1</p>
+<br>
+<p class="c0">libogg version 1.3.2</p>
+<p class="c1">Copyright (c) 2002, Xiph.org Foundation</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are met:<br>
+<br>
+- Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+<br>
+- Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+<br>
+- Neither the name of the Xiph.org Foundation nor the names of its<br>
+contributors may be used to endorse or promote products derived from<br>
+this software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION<br>
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<br>
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<br>
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">libvorbis version 1.3.5</p>
+<p class="c1">Copyright (c) 2002-2008 Xiph.org Foundation</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are met:<br>
+<br>
+- Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+<br>
+- Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+<br>
+- Neither the name of the Xiph.org Foundation nor the names of its<br>
+contributors may be used to endorse or promote products derived from<br>
+this software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION<br>
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<br>
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<br>
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">OpenCV version 3.0.0</p>
+<p class="c1">Copyright (c) 2000-2015, Intel Corporation, all rights reserved.</p>
+<p class="c1">Copyright (c) 2009-2011, Willow Garage Inc., all rights reserved.</p>
+<p class="c1">Copyright (c) 2009-2015, NVIDIA Corporation, all rights reserved.</p>
+<p class="c1">Copyright (c) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.</p>
+<p class="c1">Copyright (c) 2015, OpenCV Foundation, all rights reserved.</p>
+<p class="c1">Copyright (c) 2015, Itseez Inc., all rights reserved.</p>
+<p class="c2">
+Third party copyrights are property of their respective owners.<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are met:<br>
+<br>
+- Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+<br>
+- Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+<br>
+- Neither the name of the Xiph.org Foundation nor the names of its<br>
+contributors may be used to endorse or promote products derived from<br>
+this software without specific prior written permission.<br>
+<br>
+This software is provided by the copyright holders and contributors "as is" and<br>
+any express or implied warranties, including, but not limited to, the implied<br>
+warranties of merchantability and fitness for a particular purpose are disclaimed.<br>
+In no event shall copyright holders or contributors be liable for any direct,<br>
+indirect, incidental, special, exemplary, or consequential damages<br>
+(including, but not limited to, procurement of substitute goods or services;<br>
+loss of use, data, or profits; or business interruption) however caused<br>
+and on any theory of liability, whether in contract, strict liability,<br>
+or tort (including negligence or otherwise) arising in any way out of<br>
+the use of this software, even if advised of the possibility of such damage.<br>
+</p>
+<br>
+<p class="c0">Poly2Tri</p>
+<p class="c1">Copyright (c) 2009-2010, Poly2Tri Contributors</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without modification,<br>
+are permitted provided that the following conditions are met:<br>
+<br>
+* Redistributions of source code must retain the above copyright notice,<br>
+  this list of conditions and the following disclaimer.<br>
+* Redistributions in binary form must reproduce the above copyright notice,<br>
+  this list of conditions and the following disclaimer in the documentation<br>
+  and/or other materials provided with the distribution.<br>
+* Neither the name of Poly2Tri nor the names of its contributors may be<br>
+  used to endorse or promote products derived from this software without specific<br>
+  prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR<br>
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,<br>
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,<br>
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR<br>
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF<br>
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<br>
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">CLX C++ Libraries</p>
+<p class="c1">Copyright (c) 2004-2008, clown. All rights reserved.</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+<br>
+- Redistributions of source code must retain the above copyright<br>
+    notice, this list of conditions and the following disclaimer.<br>
+- Redistributions in binary form must reproduce the above copyright<br>
+    notice, this list of conditions and the following disclaimer in the<br>
+    documentation and/or other materials provided with the distribution.<br>
+- No names of its contributors may be used to endorse or promote<br>
+    products derived from this software without specific prior written<br>
+    permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT<br>
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<br>
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED<br>
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR<br>
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF<br>
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<br>
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">ArUco</p>
+<p class="c1">Copyright (c) 2011 Rafael Muñoz Salinas</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without modification, are<br>
+permitted provided that the following conditions are met:<br>
+<br>
+   1. Redistributions of source code must retain the above copyright notice, this list of<br>
+      conditions and the following disclaimer.<br>
+<br>
+   2. Redistributions in binary form must reproduce the above copyright notice, this list<br>
+      of conditions and the following disclaimer in the documentation and/or other materials<br>
+      provided with the distribution.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY Rafael Muñoz Salinas ''AS IS'' AND ANY EXPRESS OR IMPLIED<br>
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND<br>
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Rafael Muñoz Salinas OR<br>
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br>
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR<br>
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON<br>
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<br>
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF<br>
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">PicoJSON</p>
+<p class="c1">Copyright (c) 2009-2010 Cybozu Labs, Inc.</p>
+<p class="c1">Copyright (c) 2011-2015 Kazuho Oku</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are met:<br>
+<br>
+1. Redistributions of source code must retain the above copyright notice,<br>
+   this list of conditions and the following disclaimer.<br>
+<br>
+2. Redistributions in binary form must reproduce the above copyright notice,<br>
+   this list of conditions and the following disclaimer in the documentation<br>
+   and/or other materials provided with the distribution.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"<br>
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE<br>
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br>
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF<br>
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS<br>
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN<br>
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)<br>
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE<br>
+POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+
+<br>
+<p class="c0">miniz</p>
+<p class="c1">Copyright (c) 2013-2014 RAD Game Tools and Valve Software</p>
+<p class="c1">Copyright (c) 2010-2014 Rich Geldreich and Tenacious Software LLC</p>
+<p class="c2">
+Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+of this software and associated documentation files (the "Software"), to deal<br>
+in the Software without restriction, including without limitation the rights<br>
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
+copies of the Software, and to permit persons to whom the Software is<br>
+furnished to do so, subject to the following conditions:<br>
+<br>
+The above copyright notice and this permission notice shall be included in<br>
+all copies or substantial portions of the Software.<br>
+<br>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<br>
+THE SOFTWARE.<br>
+</p>
+<br>
+<p class="c0">quirc</p>
+<p class="c1">Copyright (c) 2010-2012 Daniel Beer</p>
+<p class="c2">
+Permission to use, copy, modify, and/or distribute this software for any<br>
+purpose with or without fee is hereby granted, provided that the above<br>
+copyright notice and this permission notice appear in all copies.<br>
+<br>
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES<br>
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF<br>
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR<br>
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES<br>
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN<br>
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF<br>
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.<br>
+</p>
+<br>
+<p class="c0">Lepton</p>
+<p class="c1">Copyright (c) 2009-2013 Stanford University and Peter Eastman</p>
+<p class="c2">
+Permission is hereby granted, free of charge, to any person obtaining a<br>
+copy of this software and associated documentation files (the "Software"),<br>
+to deal in the Software without restriction, including without limitation<br>
+the rights to use, copy, modify, merge, publish, distribute, sublicense,<br>
+and/or sell copies of the Software, and to permit persons to whom the<br>
+Software is furnished to do so, subject to the following conditions:<br>
+<br> 
+The above copyright notice and this permission notice shall be included in<br>
+all copies or substantial portions of the Software.<br>
+<br>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL<br>
+THE AUTHORS, CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,<br>
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR<br>
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE<br>
+USE OR OTHER DEALINGS IN THE SOFTWARE.<br>
+</p><br>
+<p class="c0">Opus</p>
+<p class="c1">Copyright 2001-2011 Xiph.Org, Skype Limited, Octasic,</p>
+<p class="c1">Jean-Marc Valin, Timothy B. Terriberry,</p>
+<p class="c1">CSIRO, Gregory Maxwell, Mark Borgerding,</p>
+<p class="c1">Erik de Castro Lopo</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+<br>
+- Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+<br>
+- Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+<br>
+- Neither the name of Internet Society, IETF or IETF Trust, nor the<br>
+names of specific contributors, may be used to endorse or promote<br>
+products derived from this software without specific prior written<br>
+permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER<br>
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,<br>
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,<br>
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR<br>
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF<br>
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<br>
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+Opus is subject to the royalty-free patent licenses which are<br>
+specified at:<br>
+<br>
+Xiph.Org Foundation:<br>
+https://datatracker.ietf.org/ipr/1524/ <br>
+<br>
+Microsoft Corporation:<br>
+https://datatracker.ietf.org/ipr/1914/ <br>
+<br>
+Broadcom Corporation:<br>
+https://datatracker.ietf.org/ipr/1526/ <br>
+</p>
+<br>
+<p class="c0">libopusfile</p>
+<p class="c1">Copyright (c) 1994-2013 Xiph.Org Foundation and contributors</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+<br>
+- Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+<br>
+- Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+<br>
+- Neither the name of the Xiph.Org Foundation nor the names of its<br>
+contributors may be used to endorse or promote products derived from<br>
+this software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION<br>
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<br>
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<br>
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">Zinnia</p>
+<p class="c1">Copyright (c) 2005-2007, Taku Kudo</p>
+<p class="c2">
+Redistribution and use in source and binary forms, with or without modification, are<br>
+permitted provided that the following conditions are met:<br>
+<br>
+ * Redistributions of source code must retain the above<br>
+   copyright notice, this list of conditions and the<br>
+   following disclaimer.<br>
+<br>
+    * Redistributions in binary form must reproduce the above<br>
+   copyright notice, this list of conditions and the<br>
+   following disclaimer in the documentation and/or other<br>
+   materials provided with the distribution.<br>
+<br>
+    * Neither the name of Taku Kudo nor the names of its contributors<br>
+   may be used to endorse or promote products derived from this software<br>
+   without specific prior written permission.<br>
+<br>
+   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED<br>
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A<br>
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR<br>
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<br>
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS<br>
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR<br>
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF<br>
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+</p>
+<br>
+<p class="c0">PolyPartition Library version r7</p>
+<p class="c1">Copyright (c) 2011 by Ivan Fratric</p>
+<br>
+<p class="c0">Box2D 2.3.2</p>
+<p class="c1">Copyright (c) 2006-2013 Erin Catto</p>
+<br>
+<p class="c0">DirectX Mesh Geometry Library</p>
+<p class="c1">Copyright (c) Microsoft Corporation. All rights reserved.</p>
+<br>
+<p class="c0">tinyobjloader</p>
+<p class="c1">Copyright (c) 2012-2013, Syoyo Fujita</p>
+<p class="c2">Licensed under 2-clause BSD liecense.</p>
+<br>
+<p class="c0">qrencode</p>
+<p class="c1">Copyright (c) 2006-2012 Kentaro Fukuchi</p>
+<p class="c2">free software under the terms of the LGPL v2.1</p>
+<br>
+<p class="c0">SoundTouch Library version 1.9.2</p>
+<p class="c1">Copyright (c) 2001-2015, Olli Parviainen</p>
+<p class="c2">free software under the terms of the LGPL v2.1</p>
+<br>
+<p class="c0">XDSP</p>
+<p class="c1">Copyright (c) Microsoft Corporation. All rights reserved.</p>
+<br>
+<p class="c0">par_shapes</p>
+<p class="c1">Copyright (c) 2015 Philip Rideout</p>
+<br>
+<p class="c0">Convenient Constructs For Stepping Through a Range of Values</p>
+<p class="c1">Copyright (c) Mikhail Semenov</p>
+<p class="c2">Licenced with the Code Project Open Licence (CPOL) http://www.codeproject.com/info/cpol10.aspx </p>
+<br>
+</body>
+</html>
