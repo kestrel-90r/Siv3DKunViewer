@@ -6,8 +6,8 @@ Siv3DKunViewer uses Siv3D(https://github.com/Siv3D/Reference-JP/wiki) and
 syoyo's Header only C++11 tiny glTF 2.0 library.(https://github.com/syoyo/tinygltf)
 
 ## Requirements
- - Visual Studio 2015 (v140) toolset
- - Windows 10 SDK (10.0.17763.0)
+ - Visual Studio 2022 x64(MSVC v143) toolset
+ - Windows 10 SDK (SDK10.0.19041)
 
 ## Status
 
