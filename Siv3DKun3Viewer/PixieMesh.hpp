@@ -552,7 +552,9 @@ public:
 		nodeParams.clear();
 
         //静的モデルのサイズ、中心オフセットを保存
-        __m128 rot = XMQuaternionRotationRollPitchYaw(ToRadians(eRot.x), ToRadians(eRot.y), ToRadians(eRot.z));
+        __m128 rot = XMQuaternionRotationRollPitchYaw(ToRadians(eRot.x),
+			                                          ToRadians(eRot.y),
+			                                          ToRadians(eRot.z));
 //        Mat4x4 mrot =  Mat4x4(Quaternion(rot)*qRot);
 //		Float3 t = Pos + rPos;
 //		Mat4x4 mat = Mat4x4::Identity().Scale(Float3{ -Sca.x,Sca.y,Sca.z }) * mrot * Mat4x4::Identity().Translate(t);
@@ -1152,12 +1154,11 @@ public:
 	void gltfDrawVRM( uint32 istart = -1, uint32 icount = -1 )
 	{
         uint32 tid = 0;
-//ここでQuaternionにしたら意味なくない？
-        __m128 rot = XMQuaternionRotationRollPitchYaw(ToRadians(eRot.x), ToRadians(eRot.y), ToRadians(eRot.z));
-
-		Mat4x4 mrot;
-		if (!qSpin.isIdentity()) mrot = Mat4x4(Quaternion(rot) * qRot * qSpin);
-		else mrot = Mat4x4(Quaternion(rot) * qRot);
+        __m128 qrot = XMQuaternionRotationRollPitchYaw(ToRadians(eRot.x),
+			                                           ToRadians(eRot.y),
+			                                           ToRadians(eRot.z));
+		Mat4x4 mrot = Mat4x4(qrot);
+		qRot = qRot * qSpin;
 
 		Float3 t = Pos + rPos;
 //GL系メッシュをDX系で描画時はXミラーして逆カリング
@@ -1202,9 +1203,8 @@ public:
 			                                            ToRadians(eRot.z));
 		Quaternion qrot = qRot * Quaternion(_qrot);
 
-		Mat4x4 mrot;
-		if (!qSpin.isIdentity()) qrot *= qSpin;
-		mrot = Mat4x4(qrot);
+		Mat4x4 mrot = Mat4x4(qrot);
+		qRot = qRot * qSpin;
 
 		Float3 trans = Pos + rPos;
 
@@ -1227,16 +1227,20 @@ public:
 				{
 					for (uint32 mm = 0; mm < morphTarget.size(); mm++)   //モーフ数
 					{
-						float& weight = morphTarget[NMORPH + mm].Weight;
+						float& weight = morphTarget[mm].Weight;
 						if (weight == 0.0) continue;
 						morphmv[vv].pos += shapes[primitiveidx * NMORPH + mm][vv].pos * weight;
 						morphmv[vv].normal += shapes[primitiveidx * NMORPH + mm][vv].normal * weight;
 					}
 
-					Mat4x4& matskin = noa.morphMatBuffers[vv];
+					Mat4x4 matskin = Mat4x4::Identity();
+					Mat4x4 matnor = Mat4x4::Identity();
 					SIMD_Float4 vec4pos = DirectX::XMVector4Transform(SIMD_Float4(morphmv[vv].pos, 1.0f), matskin);
-					Mat4x4 matnor = matskin.inverse().transposed();
-
+					if (noa.morphMatBuffers.size())
+					{
+						matskin = noa.morphMatBuffers[vv];
+						matnor = matskin.inverse().transposed();
+					}
 					morphmv[vv].pos = vec4pos.xyz() / vec4pos.getW();
 					morphmv[vv].normal = SIMD_Float4{ DirectX::XMVector4Transform(SIMD_Float4(morphmv[vv].normal, 1.0f), matnor) }.xyz();
 					morphmv[vv].tex = noa.MeshDatas[i].vertices[vv].tex;
@@ -1291,7 +1295,7 @@ public:
 		Mat4x4 matob = Mat4x4::Identity().Scale(Sca) * Mat4x4::Identity().Translate(trans);
 		OrientedBox orb = OrientedBox{ obbCenter, obbSize, qrot };
 
-		ob = Geometry3D::TransformBoundingOrientedBox(orb, matob);
+//		ob = Geometry3D::TransformBoundingOrientedBox(orb, matob);
 
 
 		if (obbVisible == SHOW_BOUNDBOX) ob.drawFrame(ColorF{ 0.5 });
@@ -1342,7 +1346,7 @@ public:
 		for (int32 cf = 0; cf < cycleframe; cf++)
 		{
 			frametimes.emplace_back(currenttime += frametime);
-			LOG_INFO(U"FT[{}]:{:.3f}"_fmt(cf,currenttime));
+			//LOG_INFO(U"FT[{}]:{:.3f}"_fmt(cf,currenttime));
 		}
 
 		//最大スレッド数でメモリ確保
@@ -1990,12 +1994,13 @@ public:
         matVP = camera.getViewProj();
 
         AnimeModel& ani = aniModel;
-        __m128 qrot = XMQuaternionRotationRollPitchYaw(ToRadians(eRot.x), ToRadians(eRot.y), ToRadians(eRot.z));
+        __m128 qrot = XMQuaternionRotationRollPitchYaw(ToRadians(eRot.x),
+													   ToRadians(eRot.y),
+													   ToRadians(eRot.z));
 		qrot = qRot * Quaternion(qrot);
 
-		Mat4x4 mrot;
-		if (!qSpin.isIdentity()) qrot *= qSpin;
-		mrot = Mat4x4(qrot);
+		Mat4x4 mrot = Mat4x4(qrot);
+		qRot = qRot * qSpin;
 
         Float3 trans = Pos + rPos;
 
@@ -2089,7 +2094,7 @@ public:
         PrecAnime &anime = aniModel.precAnimes[anime_no];
 		currentFrame++;
 		if ( currentFrame >= (anime.Frames.size()-1) ) currentFrame = 0;
-		LOG_INFO(U"Frame:{}/{}"_fmt(currentFrame, anime.Frames.size()));
+		//LOG_INFO(U"Frame:{}/{}"_fmt(currentFrame, anime.Frames.size()));
 		return *this;
 	}
 
@@ -2143,11 +2148,12 @@ public:
 
 		if (radius == 0)	//直線描画
 		{
-			__m128 rot = XMQuaternionRotationRollPitchYaw(ToRadians(eRot.x), ToRadians(eRot.y), ToRadians(eRot.z));
+			__m128 qrot = XMQuaternionRotationRollPitchYaw(ToRadians(eRot.x),
+														  ToRadians(eRot.y),
+														  ToRadians(eRot.z));
 
-			Mat4x4 mrot;
-			if (!qSpin.isIdentity()) mrot = Mat4x4(Quaternion(rot) * qRot * qSpin);
-			else mrot = Mat4x4(Quaternion(rot) * qRot);
+			Mat4x4 mrot = Mat4x4(qrot);
+			qRot = qRot * qSpin;
 
 			mat = Mat4x4::Identity().Scale(Float3{ -Sca.x,Sca.y,Sca.z }) * mrot;
 
